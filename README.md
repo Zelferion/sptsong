@@ -23,6 +23,9 @@ go build -o sptsong main.go
 # Make it executable from everywhere
 # If you want to use it for windows figure out yourself where to put the binary
 sudo mv ./sptsong /usr/local/bin
+
+# Permission to execute
+sudo chmod +x /usr/local/bin/mycli
 ```
 
 ### Prerequisites
@@ -31,6 +34,21 @@ sudo mv ./sptsong /usr/local/bin
 - DBus
 - Chafa (for image rendering)
 - Active Spotify session
+
+#### Arch linux
+```bash
+sudo pacman -S chafa
+```
+
+#### Ubuntu/Debian
+```bash
+sudo apt install chafa
+```
+
+#### MacOs
+```bash
+brew install chafa
+```
 
 ## 🎮 Usage
 
