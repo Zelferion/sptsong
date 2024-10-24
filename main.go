@@ -270,6 +270,12 @@ func (sd *SpotifyDisplay) Run() error {
 				continue
 			}
 
+			// Clear previous lines before writing new text
+			fmt.Printf("\033[%d;%dH%s", term.startY+1, term.startX+20, strings.Repeat(" ", 60))
+			fmt.Printf("\033[%d;%dH%s", term.startY+2, term.startX+20, strings.Repeat(" ", 60))
+			fmt.Printf("\033[%d;%dH%s", term.startY+3, term.startX+20, strings.Repeat(" ", 60))
+
+			// Write new text
 			fmt.Printf("\033[%d;%dH♫ Now Playing", term.startY+1, term.startX+20)
 			fmt.Printf("\033[%d;%dH%s", term.startY+2, term.startX+20, metadata.Title)
 			fmt.Printf("\033[%d;%dHby %s", term.startY+3, term.startX+20, metadata.Artist)
@@ -306,4 +312,3 @@ func main() {
 	fmt.Print("\033[2J\033[H")
 	fmt.Print("\033[?25h")
 }
-
