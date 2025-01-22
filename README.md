@@ -25,7 +25,7 @@ go build -o sptsong main.go
 sudo mv ./sptsong /usr/local/bin
 
 # Permission to execute
-sudo chmod +x /usr/local/bin/mycli
+sudo chmod +x /usr/local/bin/sptsong
 ```
 
 ### Prerequisites
